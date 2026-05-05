@@ -1,6 +1,7 @@
 :root {
   --bg: #f5f2eb;
   --text: #171717;
+  --text-dark: #f5f2eb;
   --muted: #666;
   --dark: #111;
   --dark-soft: #1c1c1c;
@@ -21,7 +22,7 @@ html {
 }
 
 body {
-  font-family: Inter, Arial, sans-serif;
+  font-family: Roboto, Arial, sans-serif;
   background: var(--bg);
   color: var(--text);
   line-height: 1.6;
@@ -175,10 +176,13 @@ h1 {
 }
 
 .about p {
-  color: var(--muted);
+  color: var(--text-dark);
   font-size: 1.08rem;
 }
 
+.about > div > h2{
+  color: var(--text-dark);
+}
 .grid {
   display: grid;
   gap: 24px;
@@ -394,4 +398,343 @@ footer {
 
 #portfolio > h2 {
   color: white;
+}
+
+#experience > h2 {
+  color: white;
+}
+.featured-experience {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: 0.9fr 1.4fr;
+  gap: 32px;
+  align-items: stretch;
+}
+
+.featured-role {
+  background: linear-gradient(145deg, #ff7a6d, #8f2d24);
+  color: white;
+  padding: 38px;
+  border-radius: 28px;
+  min-height: 420px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.featured-role .timeline-date {
+  color: rgba(255,255,255,0.85);
+}
+
+.featured-role h3 {
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  line-height: 1;
+  letter-spacing: -2px;
+  margin-bottom: 10px;
+}
+
+.featured-role h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 22px;
+  color: rgba(255,255,255,0.85);
+}
+
+.featured-role p {
+  font-size: 1.05rem;
+  color: rgba(255,255,255,0.9);
+  max-width: 520px;
+}
+
+.featured-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 28px;
+}
+
+.featured-tags span {
+  padding: 9px 14px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.14);
+  border: 1px solid rgba(255,255,255,0.22);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.supporting-timeline {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 16px;
+  padding-top: 16px;
+  scroll-snap-type: x mandatory;
+}
+
+.supporting-timeline::-webkit-scrollbar {
+  height: 6px;
+}
+
+.supporting-timeline::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.2);
+  border-radius: 999px;
+}
+
+.timeline-card {
+  flex: 0 0 300px;
+  background: var(--dark-soft);
+  padding: 26px;
+  border-radius: 22px;
+  border: 1px solid rgba(255,255,255,0.08);
+  scroll-snap-align: start;
+  transition: 0.3s ease;
+}
+
+.timeline-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(255,122,109,0.4);
+}
+
+.timeline-date {
+  display: block;
+  color: #ff7a6d;
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.timeline-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 4px;
+}
+
+.timeline-card h4 {
+  font-size: 0.9rem;
+  color: #aaa;
+  margin-bottom: 12px;
+}
+
+.timeline-card p {
+  color: #cfcfcf;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 900px) {
+  .featured-experience {
+    grid-template-columns: 1fr;
+  }
+
+  .featured-role {
+    min-height: auto;
+  }
+}
+
+.timeline-card {
+  cursor: pointer;
+  opacity: 0.55;
+}
+
+.timeline-card.active {
+  opacity: 1;
+  border-color: rgba(255,122,109,0.7);
+  transform: translateY(-6px);
+}
+
+.featured-role {
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.featured-role.is-changing {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.contact-section {
+  background: #f5f2eb;
+}
+
+.contact-wrapper {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.contact-left h2 {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  line-height: 1;
+  letter-spacing: -2px;
+}
+
+.contact-intro {
+  margin-top: 20px;
+  color: var(--muted);
+  max-width: 520px;
+  font-size: 1.1rem;
+}
+
+.contact-cta {
+  margin-top: 30px;
+  display: flex;
+  gap: 14px;
+}
+
+.contact-card {
+  background: white;
+  padding: 32px;
+  border-radius: 24px;
+  border: 1px solid var(--border);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.06);
+}
+
+.contact-item {
+  margin-bottom: 20px;
+}
+
+.contact-item span {
+  display: block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+.contact-item a {
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.contact-item p {
+  color: var(--text);
+  font-weight: 500;
+}
+
+.contact-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 20px 0;
+}
+
+.contact-note {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+/* mobile */
+@media (max-width: 900px) {
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-left h2 {
+    font-size: 2.2rem;
+  }
+}
+
+.itunes-slider {
+  display: flex;
+  gap: 28px;
+  overflow-x: auto;
+
+  padding: 60px 40vw 70px;
+
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+
+  align-items: center; /* 🔥 prevents vertical jitter */
+}
+
+.itunes-slider::-webkit-scrollbar {
+  height: 6px;
+}
+
+.itunes-slider::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.25);
+  border-radius: 999px;
+}
+
+.itunes-card {
+  flex: 0 0 280px;
+  min-height: 360px;
+  scroll-snap-align: center;
+
+  background: var(--dark-soft);
+  padding: 26px;
+  border-radius: 28px;
+  border: 1px solid rgba(255,255,255,0.08);
+
+  opacity: 0.45;
+  transform: scale(0.9);
+
+  transition:
+    transform 0.35s ease,
+    opacity 0.35s ease,
+    border-color 0.35s ease,
+    background 0.35s ease,
+    flex-basis 0.35s ease;
+}
+
+/* 🔥 FEATURED CARD */
+.itunes-card.active {
+  flex: 0 0 380px; /* wider */
+  opacity: 1;
+  transform: scale(1.1);
+
+  background: linear-gradient(145deg, #ff7a6d, #8f2d24);
+  border-color: rgba(255,122,109,0.7);
+
+  box-shadow: 0 30px 80px rgba(0,0,0,0.28);
+}
+
+/* text adjustments */
+.itunes-card.active h3 {
+  font-size: 1.9rem;
+  color: white;
+}
+
+.itunes-card.active h4,
+.itunes-card.active p,
+.itunes-card.active .timeline-date {
+  color: rgba(255,255,255,0.9);
+}
+
+.featured-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.featured-tags span {
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.18);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+@media (max-width: 680px) {
+  .itunes-slider {
+    padding-left: 22vw;
+    padding-right: 22vw;
+  }
+
+  .itunes-card {
+    flex-basis: 270px;
+  }
+
+  .itunes-card.active {
+    transform: scale(1.04);
+  }
+}
+
+.itunes-card {
+  margin: 0 4px;
+}
+
+.itunes-card.active {
+  margin: 0 10px;
 }

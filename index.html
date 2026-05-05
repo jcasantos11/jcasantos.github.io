@@ -4,17 +4,22 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jose Carlos Santos | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+
 </head>
 <body>
 
   <header class="navbar">
-    <div class="logo">JCS</div>
+    <div class="logo">Jose Carlos Santos</div>
     <nav>
       <a href="#about">About</a>
-      <a href="#work">Work</a>
       <a href="#services">Services</a>
       <a href="#portfolio">Portfolio</a>
+      <a href="#experience">Work</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
@@ -44,7 +49,7 @@
     </div>
   </section>
 
-  <section id="about" class="section about">
+  <section id="about" class="section about dark-section">
     <div>
       <p class="eyebrow">About Me</p>
       <h2>A web developer focused on performance, systems, and real-world usability.</h2>
@@ -187,17 +192,213 @@ missing—it’s what’s unclear.
     </p>
     <a href="#contact" class="btn primary">Let’s Talk</a>
   </section>
+<!-- <section id="experience" class="section dark-section">
+  <p class="eyebrow">Experience</p>
+  <h2>Work Experiences</h2>
 
-  <section id="contact" class="section contact">
-    <p class="eyebrow">Contact</p>
-    <h2>Let’s build something useful.</h2>
+  <div class="featured-experience">
 
-    <div class="contact-box">
-      <p>Email: <a href="mailto:jcasantos11@gmail.com">jcasantos11@gmail.com</a></p>
-      <p>Phone: <a href="tel:+639624185592">+63 962 418 5592</a></p>
-      <p>Location: Philippines</p>
+    <div class="featured-role" id="featuredRole">
+      <span class="timeline-date" id="featuredDate">Apr 2022 – Oct 2024</span>
+      <h3 id="featuredTitle">Project Consultant</h3>
+      <h4 id="featuredCompany">SABInc · Philippines</h4>
+      <p id="featuredDescription">
+        Developed Laravel-based ERP systems for fleet, payroll, logistics, billing,
+        and cheque management—turning manual workflows into structured digital systems.
+      </p>
+
+      <div class="featured-tags" id="featuredTags">
+        <span>Laravel</span>
+        <span>ERP Systems</span>
+        <span>Workflow Automation</span>
+        <span>Operations</span>
+      </div>
     </div>
-  </section>
+
+    <div class="supporting-timeline" id="timelineScroller">
+
+      <div class="timeline-card active"
+        data-date="Apr 2022 – Oct 2024"
+        data-title="Project Consultant"
+        data-company="SABInc · Philippines"
+        data-description="Developed Laravel-based ERP systems for fleet, payroll, logistics, billing, and cheque management—turning manual workflows into structured digital systems."
+        data-tags="Laravel, ERP Systems, Workflow Automation, Operations">
+        <span class="timeline-date">Apr 2022 – Oct 2024</span>
+        <h3>Project Consultant</h3>
+        <h4>SABInc · Philippines</h4>
+        <p>Developed Laravel ERP systems for operations and workflow automation.</p>
+      </div>
+
+      <div class="timeline-card"
+        data-date="Oct 2025 – Apr 2026"
+        data-title="WordPress Developer"
+        data-company="Q Digital · Australia"
+        data-description="Built and optimized responsive WordPress and WooCommerce websites, improving speed, structure, and SEO readiness for client-facing platforms."
+        data-tags="WordPress, Elementor, WooCommerce, SEO">
+        <span class="timeline-date">Oct 2025 – Apr 2026</span>
+        <h3>WordPress Developer</h3>
+        <h4>Q Digital · Australia</h4>
+        <p>Built and optimized WordPress and WooCommerce websites.</p>
+      </div>
+
+      <div class="timeline-card"
+        data-date="Nov 2024 – Aug 2025"
+        data-title="Web Optimization"
+        data-company="Kotis Design · USA"
+        data-description="Resolved critical site issues, improved content structure, and streamlined WordPress, Shopify, and HubSpot environments for better usability."
+        data-tags="WordPress, Shopify, HubSpot, Optimization">
+        <span class="timeline-date">Nov 2024 – Aug 2025</span>
+        <h3>Web Optimization</h3>
+        <h4>Kotis Design · USA</h4>
+        <p>Improved site performance, content structure, and workflows.</p>
+      </div>
+
+      <div class="timeline-card"
+        data-date="Feb 2023 – Jul 2024"
+        data-title="Shopify Developer"
+        data-company="Novanude"
+        data-description="Enhanced Shopify storefront performance, user experience, analytics tracking, and marketing integrations to support growth and conversion."
+        data-tags="Shopify, Liquid, GA4, Klaviyo">
+        <span class="timeline-date">Feb 2023 – Jul 2024</span>
+        <h3>Shopify Developer</h3>
+        <h4>Novanude</h4>
+        <p>Enhanced storefront UX, speed, and marketing integrations.</p>
+      </div>
+
+      <div class="timeline-card"
+        data-date="Mar 2021 – Apr 2024"
+        data-title="WordPress Developer"
+        data-company="Pinoypubliko"
+        data-description="Managed website updates, optimized pages, integrated analytics, and supported social media performance through Meta Business Suite."
+        data-tags="WordPress, GA4, Meta Business Suite, Analytics">
+        <span class="timeline-date">Mar 2021 – Apr 2024</span>
+        <h3>WordPress Developer</h3>
+        <h4>Pinoypubliko</h4>
+        <p>Managed website updates, analytics, and social media integrations.</p>
+      </div>
+
+    </div>
+
+  </div>
+</section> -->
+<section id="experience" class="section dark-section">
+  <p class="eyebrow">Experience</p>
+  <h2>Work Experience</h2>
+
+  <div class="itunes-slider" id="experienceSlider">
+
+    <article class="itunes-card active">
+      <span class="timeline-date">Apr 2022 – Oct 2024</span>
+      <h3>Project Consultant</h3>
+      <h4>SABInc · Philippines</h4>
+      <p>Developed Laravel-based ERP systems for fleet, payroll, logistics, billing, and cheque management.</p>
+      <div class="featured-tags">
+        <span>Laravel</span>
+        <span>ERP</span>
+        <span>Automation</span>
+      </div>
+    </article>
+
+    <article class="itunes-card">
+      <span class="timeline-date">Oct 2025 – Feb 2026</span>
+      <h3>WordPress Developer</h3>
+      <h4>Q Digital · Australia</h4>
+      <p>Built and optimized responsive WordPress and WooCommerce websites.</p>
+      <div class="featured-tags">
+        <span>WordPress</span>
+        <span>WooCommerce</span>
+        <span>SEO</span>
+      </div>
+    </article>
+
+    <article class="itunes-card">
+      <span class="timeline-date">Nov 2024 – Aug 2025</span>
+      <h3>Web Optimization</h3>
+      <h4>Kotis Design · USA</h4>
+      <p>Improved site performance, content structure, and digital workflows.</p>
+      <div class="featured-tags">
+        <span>Shopify</span>
+        <span>HubSpot</span>
+        <span>Optimization</span>
+      </div>
+    </article>
+
+    <article class="itunes-card">
+      <span class="timeline-date">Feb 2023 – Jul 2024</span>
+      <h3>Shopify Developer</h3>
+      <h4>Novanude</h4>
+      <p>Enhanced storefront UX, speed, analytics, and marketing integrations.</p>
+      <div class="featured-tags">
+        <span>Shopify</span>
+        <span>Liquid</span>
+        <span>GA4</span>
+      </div>
+    </article>
+
+    <article class="itunes-card">
+      <span class="timeline-date">Mar 2021 – Apr 2024</span>
+      <h3>WordPress Developer</h3>
+      <h4>Pinoypubliko</h4>
+      <p>Managed website updates, analytics, and social media integrations.</p>
+      <div class="featured-tags">
+        <span>WordPress</span>
+        <span>Analytics</span>
+        <span>Meta</span>
+      </div>
+    </article>
+
+  </div>
+</section>
+  <section id="contact" class="section contact-section">
+
+  <div class="contact-wrapper">
+
+    <div class="contact-left">
+      <p class="eyebrow">Contact</p>
+      <h2>Let’s build something that actually works.</h2>
+
+      <p class="contact-intro">
+        If you’re looking for someone who can handle both the technical side and the thinking behind it—
+        websites, systems, or workflows—I’d be glad to help.
+      </p>
+
+      <div class="contact-cta">
+        <a href="mailto:jcasantos11@gmail.com" class="btn primary">
+          Email Me
+        </a>
+
+        <a href="tel:+639624185592" class="btn secondary">
+          Call Me
+        </a>
+      </div>
+    </div>
+
+    <div class="contact-card">
+      <div class="contact-item">
+        <span>Email</span>
+        <a href="mailto:jcasantos11@gmail.com">jcasantos11@gmail.com</a>
+      </div>
+
+      <div class="contact-item">
+        <span>Phone</span>
+        <a href="tel:+639624185592">+63 962 418 5592</a>
+      </div>
+
+      <div class="contact-item">
+        <span>Location</span>
+        <p>Philippines (Available for remote work)</p>
+      </div>
+
+      <div class="contact-divider"></div>
+
+      <p class="contact-note">
+        Open to freelance, contract, and long-term projects.
+      </p>
+    </div>
+
+  </div>
+
+</section>
 
   <footer>
     <p>© 2026 JCASantos. All rights reserved.</p>
